@@ -27,6 +27,17 @@
         .mobile-menu {
             display: none;
         }
+        .scrollable-container::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollable-container {
+            scrollbar-width: none; 
+        }
+        .testimonial-item {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        
         @media (max-width: 768px) {
             .mobile-menu {
                 display: block;
@@ -34,6 +45,7 @@
             .desktop-menu {
                 display: none;
             }
+            
         }
     </style>
 </head>
@@ -132,83 +144,131 @@
                       <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                   </div>
-                  <div class="md:w-2/3 flex flex-wrap justify-center md:justify-start">
-                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                      <div class="relative">
-                        <img
-                          alt="A modern chair in a living room"
-                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
-                          src="https://i.postimg.cc/RF4RfNcz/peng.png"
-                        />
-                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Chair</div>
+                  <div class="md:w-2/3 overflow-hidden">
+                    
+                    <div
+                      class="scrollable-container flex space-x-4 overflow-x-auto scroll-smooth"
+                      style="scrollbar-width: none; -ms-overflow-style: none;"
+                    >
+                      <div class="w-[300px] p-2 flex-shrink-0">
+                        <div class="relative">
+                          <img
+                            alt="A modern chair in a living room"
+                            class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                            src="https://i.postimg.cc/RF4RfNcz/peng.png"
+                          />
+                          <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Chair</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                      <div class="relative">
-                        <img
-                          alt="A cozy bed in a bedroom"
-                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
-                          src="https://i.postimg.cc/TPXqMpNW/mclean.png"
-                        />
-                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Bed</div>
+                      <div class="w-[300px] p-2 flex-shrink-0">
+                        <div class="relative">
+                          <img
+                            alt="A cozy bed in a bedroom"
+                            class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                            src="https://i.postimg.cc/TPXqMpNW/mclean.png"
+                          />
+                          <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Bed</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                      <div class="relative">
-                        <img
-                          alt="A cupboard with neatly arranged items"
-                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
-                          src="https://i.postimg.cc/504ByDV4/sanibell.png"
-                        />
-                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Cupboard</div>
+                      <div class="w-[300px] p-2 flex-shrink-0">
+                        <div class="relative">
+                          <img
+                            alt="A cupboard with neatly arranged items"
+                            class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                            src="https://i.postimg.cc/504ByDV4/sanibell.png"
+                          />
+                          <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Cupboard</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                      <div class="relative">
-                        <img
-                          alt="Modern lighting fixtures"
-                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
-                          src="https://i.postimg.cc/G2XkyzLk/jean.png"
-                        />
-                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Lighting</div>
+                      <div class="w-[300px] p-2 flex-shrink-0">
+                        <div class="relative">
+                          <img
+                            alt="Modern lighting fixtures"
+                            class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                            src="https://i.postimg.cc/G2XkyzLk/jean.png"
+                          />
+                          <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Lighting</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               
+              
             <div class="container mx-auto px-4 py-16">
                 
                 <div class="flex flex-col md:flex-row items-center justify-center">
                     <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-8">What People Are Saying About Us</h2>
-                        <div class="lg:flex justify-center items-center">
-                            <img alt="Portrait of a person named Josh Smith" class="rounded-full w-24 h-24 mb-4" height="100" src="https://i.postimg.cc/Gm9hLQNW/Ellipse-202.png" width="100"/>
-                            <h3 class="text-xl font-bold text-gray-800 lg:px-4">
-                            Josh Smith
-                            </h3>
+                      <h2 class="text-4xl font-bold text-gray-800 mb-8">What People Are Saying About Us</h2>
+                  
+                      <div id="testimonial-container" class="relative overflow-hidden w-full h-auto">
+                        
+                        <div class="testimonial-item" id="testimonial-1">
+                          <div class="lg:flex ">
+                            <img
+                              alt="Josh Smith"
+                              class="rounded-full w-24 h-24 mb-4"
+                              height="100"
+                              src="https://i.postimg.cc/Gm9hLQNW/Ellipse-202.png"
+                              width="100"
+                            />
+                            <h3 class="text-xl font-bold text-gray-800 lg:px-4 py-6">Josh Smith</h3>
+                          </div>
+                          <p class="text-gray-500 mb-4">Manager of The New York Times</p>
+                          <p class="text-lg text-gray-700 mb-8">
+                            “They have a perfect touch for making something so professional,
+                            interesting, and useful for a lot of people.”
+                          </p>
                         </div>
-                        <p class="text-gray-500 mb-4">
-                        Manager of The New York Times
-                        </p>
-                        <p class="text-lg text-gray-700 mb-8">
-                        “They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”
-                        </p>
-                        <div class="flex space-x-4">
-                            <button class="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-md">
-                                <i class="fas fa-arrow-left text-a">
-                                </i>
-                            </button>
-                            <button class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full shadow-md">
-                                <i class="fas fa-arrow-right">
-                                </i>
-                            </button>
+                  
+                        
+                        <div class="testimonial-item hidden" id="testimonial-2">
+                          <div class="lg:flex">
+                            <img
+                              alt="Josh Smith2"
+                              class="rounded-full w-24 h-24 mb-4"
+                              height="100"
+                              src="https://i.postimg.cc/Gm9hLQNW/Ellipse-202.png"
+                              width="100"
+                            />
+                            <h3 class="text-xl font-bold text-gray-800 lg:px-4 py-6">Josh Smith2</h3>
+                          </div>
+                          <p class="text-gray-500 mb-4">Manager of The New York Times</p>
+                          <p class="text-lg text-gray-700 mb-8">
+                            “They have a perfect touch for making something so professional,
+                            interesting, and useful for a lot of people.”
+                          </p>
                         </div>
+                      </div>
+                  
+                      
+                      <div class="flex space-x-4">
+                        <button
+                          id="arrow-left"
+                          class="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-md"
+                        >
+                          <i class="fas fa-arrow-left text-a"></i>
+                        </button>
+                        <button
+                          id="arrow-right"
+                          class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full shadow-md"
+                        >
+                          <i class="fas fa-arrow-right"></i>
+                        </button>
+                      </div>
                     </div>
+                  
                     <div class="md:w-1/2">
-                        <img alt="A beautifully decorated living room with a sofa, coffee table, and wall decorations" class="rounded-lg shadow-md" height="400" src="https://i.postimg.cc/3W5C8Nr6/house.png" width="600"/>
+                      <img
+                        alt="A beautifully decorated living room with a sofa, coffee table, and wall decorations"
+                        class="rounded-lg shadow-md"
+                        height="400"
+                        src="https://i.postimg.cc/3W5C8Nr6/house.png"
+                        width="600"
+                      />
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
         <div class="relative w-full h-full p-6 mt-20 flex items-center justify-center">
@@ -226,9 +286,20 @@
                     Join our mailing list
                 </p>
                 <div class="flex items-center">
-                    <input class="p-3 rounded-l-lg w-full md:w-2/3" placeholder="Your email address" type="email"/>
-                    <button class="bg-gray-800 text-white p-3 rounded-r-lg">Shop Now</button>
+                    <input 
+                        id="emailInput" 
+                        class="p-3 rounded-l-lg w-full md:w-2/3 border border-gray-300" 
+                        placeholder="Your email address" 
+                        type="email"
+                    />
+                    <button 
+                        id="shopNowButton" 
+                        class="bg-gray-800 text-white p-3 rounded-r-lg"
+                    >
+                        Shop Now
+                    </button>
                 </div>
+                <p id="errorMessage" class="text-red-500 mt-2 hidden">Please enter your email address.</p>
             </div>
         </div>
         <footer class="py-10 bg-f">
@@ -309,5 +380,87 @@
             }
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const scrollableContainer = document.querySelector('.scrollable-container');
+    
+          
+          scrollableContainer.style.overflowY = 'hidden';
+    
+          
+          let isMouseDown = false;
+          let startX;
+          let scrollLeft;
+    
+          scrollableContainer.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            scrollableContainer.classList.add('scrolling');
+            startX = e.pageX - scrollableContainer.offsetLeft;
+            scrollLeft = scrollableContainer.scrollLeft;
+          });
+    
+          scrollableContainer.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+            scrollableContainer.classList.remove('scrolling');
+          });
+    
+          scrollableContainer.addEventListener('mouseup', () => {
+            isMouseDown = false;
+            scrollableContainer.classList.remove('scrolling');
+          });
+    
+          scrollableContainer.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            e.preventDefault();
+            const x = e.pageX - scrollableContainer.offsetLeft;
+            const walk = (x - startX) * 2; 
+            scrollableContainer.scrollLeft = scrollLeft - walk;
+          });
+        });
+    </script>
+    <script>
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        const arrowLeft = document.getElementById('arrow-left');
+        const arrowRight = document.getElementById('arrow-right');
+        let currentIndex = 0;
+      
+        function showTestimonial(index) {
+          testimonials.forEach((testimonial, i) => {
+            if (i === index) {
+              testimonial.classList.remove('hidden');
+            } else {
+              testimonial.classList.add('hidden');
+            }
+          });
+        }
+      
+        arrowLeft.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+          showTestimonial(currentIndex);
+        });
+      
+        arrowRight.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % testimonials.length;
+          showTestimonial(currentIndex);
+        });
+      
+        
+        showTestimonial(currentIndex);
+      </script>
+      <script>
+        document.getElementById('shopNowButton').addEventListener('click', function() {
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+    
+            if (emailInput.value.trim() === '') {
+                emailInput.classList.add('border-red-500');
+                errorMessage.classList.remove('hidden');
+            } else {
+                emailInput.classList.remove('border-red-500');
+                errorMessage.classList.add('hidden');
+            }
+        });
+    </script>
+
 </body>
 </html>
