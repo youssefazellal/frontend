@@ -1,0 +1,313 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>FurniShop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { siara: ["Saira", "serif"] },
+              colors: {
+                c: "#E2E2E266",
+                f: "#23262F",
+                a: "#286F6C",
+              },
+            },
+          },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            .desktop-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="relative h-screen">
+        <div class="absolute inset-0 w-full h-full">
+            <img alt="Background image of a modern living room with a yellow sofa, a floor lamp, and a potted plant" class="w-full h-full object-cover" height="1080" src="https://i.postimg.cc/HLrvnDWw/living-room.png" width="1920"/>
+        </div>
+        <div class="relative z-10 container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                FurniShop
+            </div>
+            <nav class="space-x-4 desktop-menu">
+                <a class="text-white font-siara font-semibold hover:text-gray-300" href="#">Home</a>
+                <a class="text-white font-siara font-semibold hover:text-gray-300" href="#">About</a>
+                <a class="text-white font-siara font-semibold hover:text-gray-300" href="#">Features</a>
+                <a class="text-white font-siara font-semibold hover:text-gray-300" href="#">Contact</a>
+            </nav>
+            <div class="mobile-menu">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="absolute top-16 left-0 w-full bg-gray-800 text-white hidden">
+            <a class="block px-4 py-2 font-siara font-semibold hover:bg-gray-700" href="#">Home</a>
+            <a class="block px-4 py-2 font-siara font-semibold hover:bg-gray-700" href="#">About</a>
+            <a class="block px-4 py-2 font-siara font-semibold hover:bg-gray-700" href="#">Features</a>
+            <a class="block px-4 py-2 font-siara font-semibold hover:bg-gray-700" href="#">Contact</a>
+        </div>
+        <div class="relative h-full flex items-center justify-center">
+            <div class="relative z-10 text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-siara font-semibold mb-4">Creative Home Simplify Your<br /> Furniture</h1>
+                <p class="text-lg font-normal mb-6">Do i have consent to record this meeting gain location, root-and-<br />branch, review, nor game plan who's the goto</p>
+                <button class="bg-c text-white px-8 py-4 rounded-lg font-siara font-semibold">Shop Now</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="bg-teal-600 py-8 ">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-4 text-center text-white">
+                <div>
+                    <div class="text-3xl font-siara font-semibold">7</div>
+                    <div class="text-lg font-siara font-normal">Year Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-siara font-semibold">2</div>
+                    <div class="text-lg font-siara font-normal">Opened in the country</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-siara font-semibold">10k+</div>
+                    <div class="text-lg font-siara font-normal">Furniture sold</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-siara font-semibold">260+</div>
+                    <div class="text-lg font-siara font-normal">Variant Furniture</div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto p-4 mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img alt="A cozy living room with a sofa and a wooden coffee table" class="rounded-lg" height="400" src="https://i.postimg.cc/RF4RfNcz/peng.png" width="600"/>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h1 class="text-3xl font-bold mb-4">We Create Your Home More Aesthetic</h1>
+                    <p class="text-gray-600 mb-4">Furniture power is a software as services for multipurpose<br /> business management system,</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-black mr-2 mt-1"></i>
+                            <div>
+                                <h2 class="font-bold">Valuation Services</h2>
+                                <p class="text-gray-600">Sometimes features require a short description. This can be detailed<br /> description</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-black mr-2 mt-1"></i>
+                            <div>
+                                <h2 class="font-bold">Development of Furniture Models</h2>
+                                <p class="text-gray-600">Sometimes features require a short description. This can be detailed<br /> description</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container mx-auto px-4 py-8 mt-20">
+                <div class="flex flex-col md:flex-row items-center">
+                  <div class="md:w-1/3 mb-8 md:mb-0">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">New In Store Now</h1>
+                    <p class="text-gray-600 mb-4">
+                      Get the latest items immediately<br /> with promo prices
+                    </p>
+                    <a class="text-gray-800 font-semibold hover:underline flex items-center" href="#">
+                      Check All
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                  <div class="md:w-2/3 flex flex-wrap justify-center md:justify-start">
+                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
+                      <div class="relative">
+                        <img
+                          alt="A modern chair in a living room"
+                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                          src="https://i.postimg.cc/RF4RfNcz/peng.png"
+                        />
+                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Chair</div>
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
+                      <div class="relative">
+                        <img
+                          alt="A cozy bed in a bedroom"
+                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                          src="https://i.postimg.cc/TPXqMpNW/mclean.png"
+                        />
+                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Bed</div>
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
+                      <div class="relative">
+                        <img
+                          alt="A cupboard with neatly arranged items"
+                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                          src="https://i.postimg.cc/504ByDV4/sanibell.png"
+                        />
+                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Cupboard</div>
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 p-2">
+                      <div class="relative">
+                        <img
+                          alt="Modern lighting fixtures"
+                          class="rounded-lg shadow-md w-[300px] h-[400px] object-cover"
+                          src="https://i.postimg.cc/G2XkyzLk/jean.png"
+                        />
+                        <div class="absolute bottom-4 left-4 text-white text-xl font-bold">Lighting</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="container mx-auto px-4 py-16">
+                
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
+                        <h2 class="text-4xl font-bold text-gray-800 mb-8">What People Are Saying About Us</h2>
+                        <div class="lg:flex justify-center items-center">
+                            <img alt="Portrait of a person named Josh Smith" class="rounded-full w-24 h-24 mb-4" height="100" src="https://i.postimg.cc/Gm9hLQNW/Ellipse-202.png" width="100"/>
+                            <h3 class="text-xl font-bold text-gray-800 lg:px-4">
+                            Josh Smith
+                            </h3>
+                        </div>
+                        <p class="text-gray-500 mb-4">
+                        Manager of The New York Times
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8">
+                        “They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”
+                        </p>
+                        <div class="flex space-x-4">
+                            <button class="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-md">
+                                <i class="fas fa-arrow-left text-a">
+                                </i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full shadow-md">
+                                <i class="fas fa-arrow-right">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img alt="A beautifully decorated living room with a sofa, coffee table, and wall decorations" class="rounded-lg shadow-md" height="400" src="https://i.postimg.cc/3W5C8Nr6/house.png" width="600"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative w-full h-full p-6 mt-20 flex items-center justify-center">
+            <div 
+                class="absolute inset-0 bg-cover bg-center" 
+                style="background-image: url('https://i.postimg.cc/C1LtjPg7/lamp.png');" 
+            ></div>
+            <div class="ml-auto w-full md:w-1/2 p-6 backdrop-blur-sm"> 
+                <h1 class="text-white text-4xl md:text-5xl font-bold mb-4">
+                    Get more discount
+                    <br/>
+                    Off your order
+                </h1>
+                <p class="text-white text-lg mb-6">
+                    Join our mailing list
+                </p>
+                <div class="flex items-center">
+                    <input class="p-3 rounded-l-lg w-full md:w-2/3" placeholder="Your email address" type="email"/>
+                    <button class="bg-gray-800 text-white p-3 rounded-r-lg">Shop Now</button>
+                </div>
+            </div>
+        </div>
+        <footer class="py-10 bg-f">
+            <div class="container mx-auto px-4">
+                <div class="lg:flex justify-between">
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl font-bold text-white">FurniShop</h1>
+                    </div>
+                    <div class="flex justify-center space-x-4 mb-8">
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <hr class="border-gray-700 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center md:text-left">
+                    <div>
+                        <h2 class="text-lg font-semibold text-white mb-4">Our Products</h2>
+                        <ul>
+                            <li class="mb-2 text-white hover:text-gray-300">The Support Suite</li>
+                            <li class="mb-2 text-white hover:text-gray-300">The Sales Suite</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Support</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Guide</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-white mb-4">Top Features</h2>
+                        <ul>
+                            <li class="mb-2 text-white hover:text-gray-300">Ticketing System</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Knowledge Base</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Community Forums</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Help Desk Software</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-white mb-4">Resources</h2>
+                        <ul>
+                            <li class="mb-2 text-white hover:text-gray-300">Product Support</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Request Demo</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Library</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Peoplepower Blog</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-white mb-4">Company</h2>
+                        <ul>
+                            <li class="mb-2 text-white hover:text-gray-300">About Us</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Press</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Investors</li>
+                            <li class="mb-2 text-white hover:text-gray-300">Events</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-white mb-4">Favourite Things</h2>
+                        <ul>
+                            <li class="mb-2 text-white hover:text-gray-300">For Enterprise</li>
+                            <li class="mb-2 text-white hover:text-gray-300">For Startups</li>
+                            <li class="mb-2 text-white hover:text-gray-300">For Benchmark</li>
+                            <li class="mb-2 text-white hover:text-gray-300">For Small Business</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <p class="text-white">© NameBrand 2022 - All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menuItems = document.getElementById('mobile-menu-items');
+            if (menuItems.classList.contains('hidden')) {
+                menuItems.classList.remove('hidden');
+            } else {
+                menuItems.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
